@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(230, 251, 244);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inp {
+  width: 300px;
+  height: 30px;
+  margin: 20px;
+  border: 1px solid rgb(180, 178, 178);
+}
+
+ul {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.text {
+  color: rgb(93, 93, 93);
+}
