@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose, } from 'redux';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import setingReducer from '../components/setingState';
-import { changeSetingEpic, searchSetingEpic } from '../components/epics';
+import setingReducer from './setingState';
+import { changeSetingEpic, searchSetingEpic } from './epics';
 
 const reducer = combineReducers({
     seting: setingReducer,

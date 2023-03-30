@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeSearch } from './actions';
+import { changeSearch } from '../store/actions';
 
 export default function Skills() {
     const { items, loading, error, search } = useSelector(state => state.seting);
@@ -13,11 +13,11 @@ export default function Skills() {
     };
 
     return (
-        <Fragment>
+        <>
             <div><input className="inp" type="search" value={search} onChange={handleSearch} /></div>
             {!spaceStr && <div className="text">Type something to search</div>}
             {spaceStr && loading && <div className="text">searching...</div>}
             {error ? <div>Error occured</div> : <ul>{items.map(o => <li key={o.id}>{o.name}</li>)}</ul>}
-        </Fragment>
+        </>
     )
 }
